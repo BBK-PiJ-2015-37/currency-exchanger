@@ -7,31 +7,27 @@ boolean finished = false;
 while (!finished) {
     println "";
     println "What would you like to do?";
-    println "   1 - Exchange pounds into euro";
-    println "   2 - Exchange euro into pounds";
-    println "   3 - Exchange dollars into rubles";
+    println "   pounds - Exchange pounds into euro";
+    println "   euros - Exchange euro into pounds";
     println "   0 - Exit the program";
     println "";
     print   "> ";
     int choice = Integer.parseInt(System.console().readLine());
     switch (choice) {
-    case 1:
+    case pounds:
 	  print "How many pounds would you like to convert? ";
 	  double pounds = Double.parseDouble(System.console().readLine());
           println "Calculating..."
 	  double euro   = pounds * euroOverPoundRatio;
 	  println "£" + pounds + " will give you " + euro + "€";
 	  break;
-    case 2: 
+    case euros: 
 	  print "How many euro would you like to convert? ";
 	  double euro   = Double.parseDouble(System.console().readLine());
           println "Calculating..."
 	  double pounds = euro * poundOverEuroRatio;
 	  println euro + "€ will give you £" + pounds;
-	  break;
-    case 3:
-          println "Sorry, we do not have sufficient rubles";
-          break; 
+	  break; 
     case 0: 
 	  finished = true;
 	  break;
