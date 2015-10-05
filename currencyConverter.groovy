@@ -1,4 +1,4 @@
-﻿print "If I give you £1, how many Euro will you give me? ";
+﻿print "If I give you £1, how many euro will you give me? ";
 double euroOverPoundRatio = Double.parseDouble(System.console().readLine());
 print "If I give you 1€, how many Sterling pounds will you give me? ";
 double poundOverEuroRatio = Double.parseDouble(System.console().readLine());
@@ -9,6 +9,7 @@ while (!finished) {
     println "What would you like to do?";
     println "   1 - Exchange pounds into euro";
     println "   2 - Exchange euro into pounds";
+    println "   3 - Exchange dollars into rubles";
     println "   0 - Exit the program";
     println "";
     print   "> ";
@@ -28,6 +29,9 @@ while (!finished) {
 	  double pounds = euro * poundOverEuroRatio;
 	  println euro + "€ will give you £" + pounds;
 	  break;
+    case 3:
+          println "Sorry, we do not have sufficient rubles";
+          break; 
     case 0: 
 	  finished = true;
 	  break;
